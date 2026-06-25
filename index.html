@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赫斯維爾國宴 | 首頁</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F2E7;
+    --ink:#2B2420;
+    --burgundy:#6B1722;
+    --burgundy-deep:#4E0F18;
+    --gold:#C39A45;
+    --hair:rgba(195,154,69,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Serif TC',serif;
+    letter-spacing:.02em;
+  }
+  .bg-texture{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:radial-gradient(circle at 50% 0%, rgba(195,154,69,0.08), transparent 60%), var(--cream);
+  }
+  .royal-nav{
+    background:#FBF7EC;
+    border-bottom:1px solid var(--hair);
+    padding:12px 0;
+  }
+  .nav-inner{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-size:1.42rem;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .brand img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+  }
+  .nav-actions{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    margin-left:auto;
+  }
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+  }
+  .nav-links a{
+    color:#6b5f4d;
+    font-size:.85rem;
+    letter-spacing:.14em;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover,
+  .nav-links a.active{
+    color:var(--burgundy);
+    border-color:var(--gold);
+  }
+  .lang-switch{
+    white-space:nowrap;
+    font-size:.78rem;
+    letter-spacing:.1em;
+  }
+  .lang-btn{
+    background:none;
+    border:none;
+    color:#9c8d70;
+    cursor:pointer;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:2px 4px;
+  }
+  .lang-btn.active{
+    color:var(--burgundy);
+    font-weight:600;
+  }
+  .lang-sep{color:var(--hair);}
+  .hero{
+    max-width:1120px;
+    margin:48px auto 44px;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:minmax(0, 1.05fr) minmax(320px, .95fr);
+    gap:42px;
+    align-items:center;
+  }
+  .hero-copy{
+    padding:16px 0;
+  }
+  .eyebrow{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    color:var(--burgundy);
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    margin:0 0 14px;
+  }
+  h1{
+    margin:0;
+    font-size:clamp(2.2rem, 4.8vw, 4.4rem);
+    line-height:1.08;
+    letter-spacing:.08em;
+    color:var(--ink);
+  }
+  .hero-text{
+    max-width:560px;
+    margin:24px 0 0;
+    font-size:1.02rem;
+    line-height:2.05;
+    color:#4f4438;
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:30px;
+  }
+  .royal-link{
+    border:1px solid var(--gold);
+    color:var(--burgundy-deep);
+    background:#FBF7EC;
+    text-decoration:none;
+    padding:11px 18px;
+    letter-spacing:.12em;
+    font-size:.9rem;
+  }
+  .royal-link.primary{
+    background:var(--burgundy);
+    color:#fff;
+    border-color:var(--burgundy);
+  }
+  .flag-frame{
+    border:1.5px solid var(--gold);
+    background:#FBF7EC;
+    padding:10px;
+    box-shadow:0 30px 70px -25px rgba(43,36,32,0.38);
+  }
+  .flag-frame img{
+    width:100%;
+    display:block;
+    aspect-ratio:16/10;
+    object-fit:cover;
+  }
+  .section{
+    max-width:1120px;
+    margin:0 auto 70px;
+    padding:0 20px;
+  }
+  .section-head{
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+    gap:18px;
+    border-top:1px solid var(--hair);
+    padding-top:28px;
+    margin-bottom:22px;
+  }
+  .section-title{
+    margin:0;
+    font-size:1.45rem;
+    letter-spacing:.16em;
+  }
+  .section-note{
+    margin:0;
+    color:#6b5f4d;
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+  }
+  .photo-grid{
+    display:grid;
+    grid-template-columns:1.2fr .9fr .9fr;
+    gap:16px;
+  }
+  .photo-tile{
+    background:#FBF7EC;
+    border:1px solid rgba(195,154,69,0.55);
+    padding:8px;
+  }
+  .photo-button{
+    display:block;
+    width:100%;
+    height:100%;
+    padding:0;
+    border:0;
+    background:none;
+    cursor:pointer;
+  }
+  .photo-tile.featured-photo{
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+  .photo-tile img,
+  .photo-button img{
+    width:100%;
+    height:100%;
+    min-height:220px;
+    object-fit:cover;
+    display:block;
+  }
+  .photo-tile.wide{
+    grid-column:span 2;
+  }
+  .lightbox{
+    position:fixed;
+    inset:0;
+    z-index:20;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+    background:rgba(43,36,32,0.82);
+  }
+  .lightbox.show{display:flex;}
+  .lightbox-panel{
+    position:relative;
+    max-width:min(1100px, 94vw);
+    max-height:90vh;
+    background:#FBF7EC;
+    border:1px solid var(--gold);
+    padding:10px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.42);
+  }
+  .lightbox-panel img{
+    display:block;
+    max-width:100%;
+    max-height:82vh;
+    object-fit:contain;
+  }
+  .lightbox-close{
+    position:absolute;
+    top:-14px;
+    right:-14px;
+    width:34px;
+    height:34px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    background:#FBF7EC;
+    color:var(--burgundy);
+    font-size:1.3rem;
+    line-height:1;
+    cursor:pointer;
+  }
+  @media (max-width:760px){
+    .brand img{width:56px;height:56px;}
+    .brand span{display:none;}
+    .nav-actions{gap:12px;}
+    .nav-links{gap:14px;}
+    .nav-links a{font-size:.74rem;letter-spacing:.1em;}
+    .hero{grid-template-columns:1fr;margin-top:30px;}
+    .photo-grid{grid-template-columns:1fr;}
+    .photo-tile.featured-photo{grid-column:auto;grid-row:auto;}
+    .section-head{display:block;}
+    .section-note{margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+<div class="bg-texture"></div>
+<nav class="royal-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="state-banquet-nav.png" alt="赫斯維爾徽章">
+      <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-links">
+        <a href="index.html" class="active i18n" data-zh="首頁" data-en="Home">首頁</a>
+        <a href="guest-list.html" class="i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
+        <a href="state-banquet.html" class="i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
+      </div>
+      <div class="lang-switch" aria-label="語言切換">
+        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow i18n" data-zh="State Banquet" data-en="State Banquet">State Banquet</p>
+      <h1 class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</h1>
+      <p class="hero-text i18n" data-zh="謹以大公殿下之名，迎候諸萬邦貴賓。此宴承襲赫斯維爾典禮傳統，以莊重之儀、友誼之心，紀念國慶與邦交之誼。" data-en="In the name of Findeshia Palace, honoured guests are received in ceremony and friendship, marking the National Day of Hershwell and the bonds among realms.">謹以大公殿下之名，迎候諸萬邦貴賓。此宴承襲赫斯維爾典禮傳統，以莊重之儀、友誼之心，紀念國慶與邦交之誼。</p>
+      <div class="hero-actions">
+        <a class="royal-link primary i18n" href="guest-list.html" data-zh="查看受邀賓客" data-en="View Guests">查看受邀賓客</a>
+        <a class="royal-link i18n" href="state-banquet.html" data-zh="開啟邀請函" data-en="Open Invitation">開啟邀請函</a>
+      </div>
+    </div>
+    <div class="flag-frame">
+      <img src="royal-flag.png" alt="赫斯維爾皇家旗">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title i18n" data-zh="去年典禮回顧" data-en="Scenes from Last Year">去年典禮回顧</h2>
+      <p class="section-note i18n" data-zh="禮儀、祝酒與賓客合影" data-en="Ceremony, toast, and honoured company">禮儀、祝酒與賓客合影</p>
+    </div>
+    <div class="photo-grid">
+      <div class="photo-tile featured-photo"><button class="photo-button" type="button"><img src="banquet-2025-group.jpg" alt="去年國宴賓客合影"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-certificate.jpg" alt="去年國宴授函儀式"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-toast.jpg" alt="去年國宴祝酒時刻"></button></div>
+      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="banquet-2025-violin.jpg" alt="去年國宴小提琴演奏"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-chess.jpg" alt="去年國宴棋局時刻"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-celebration.jpg" alt="去年國宴歡慶時刻"></button></div>
+      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="banquet-2025-reception.jpg" alt="去年國宴宴會時刻"></button></div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="photo-lightbox" aria-hidden="true">
+  <div class="lightbox-panel">
+    <button class="lightbox-close" type="button" aria-label="關閉">×</button>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+  function applyLanguage(lang){
+    $('.lang-btn').removeClass('active');
+    $('.lang-btn[data-lang="' + lang + '"]').addClass('active');
+    $('.i18n').each(function(){
+      var $el = $(this);
+      var txt = $el.attr('data-' + lang);
+      if (txt !== undefined) {
+        $el.html(txt);
+      }
+    });
+  }
+  applyLanguage(localStorage.getItem('banquetLang') || 'zh');
+  $('.lang-btn').on('click', function(){
+    var lang = $(this).data('lang');
+    localStorage.setItem('banquetLang', lang);
+    applyLanguage(lang);
+  });
+  $('.photo-button').on('click', function(){
+    var $img = $(this).find('img');
+    $('#lightbox-image').attr('src', $img.attr('src')).attr('alt', $img.attr('alt'));
+    $('#photo-lightbox').addClass('show').attr('aria-hidden', 'false');
+  });
+  function closeLightbox(){
+    $('#photo-lightbox').removeClass('show').attr('aria-hidden', 'true');
+    $('#lightbox-image').attr('src', '').attr('alt', '');
+  }
+  $('.lightbox-close').on('click', closeLightbox);
+  $('#photo-lightbox').on('click', function(e){
+    if (e.target === this) { closeLightbox(); }
+  });
+  $(document).on('keydown', function(e){
+    if (e.key === 'Escape') { closeLightbox(); }
+  });
+});
+</script>
+</body>
+</html>

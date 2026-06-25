@@ -1,0 +1,607 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<title>赫斯維爾國宴 | 邀請函</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F2E7;
+    --cream-deep:#EFE7D4;
+    --ink:#2B2420;
+    --burgundy:#6B1722;
+    --burgundy-deep:#4E0F18;
+    --purple:#4A2D63;
+    --gold:#C39A45;
+    --gold-light:#E3CD93;
+    --hair:rgba(195,154,69,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Serif TC', serif;
+    font-weight:400;
+    letter-spacing:.02em;
+    overflow-x:hidden;
+  }
+  .bg-texture{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:radial-gradient(circle at 50% 0%, rgba(195,154,69,0.08), transparent 60%), var(--cream);
+  }
+  .royal-nav{
+    background:#FBF7EC;
+    border-bottom:1px solid var(--hair);
+    padding:12px 0;
+  }
+  .royal-nav .nav-inner{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+  }
+  .royal-nav .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-weight:600;
+    font-size:1.42rem;
+    letter-spacing:.08em;
+    color:var(--ink);
+    text-decoration:none;
+    min-width:0;
+  }
+  .royal-nav .nav-actions{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    flex-shrink:0;
+    margin-left:auto;
+  }
+  .royal-nav .brand img{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    flex-shrink:0;
+    display:block;
+  }
+  .royal-nav .brand span{white-space:nowrap;}
+  .royal-nav .nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+    flex-shrink:0;
+  }
+  .royal-nav .nav-links a{
+    font-size:.85rem;
+    letter-spacing:.14em;
+    color:#6b5f4d;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding-bottom:3px;
+    border-bottom:1px solid transparent;
+    transition:color .2s, border-color .2s;
+  }
+  .royal-nav .nav-links a:hover,
+  .royal-nav .nav-links a.active{
+    color:var(--burgundy);
+    border-color:var(--gold);
+  }
+  @media (max-width:620px){
+    .royal-nav .nav-inner{padding:0 14px;gap:12px;}
+    .royal-nav .brand img{width:56px;height:56px;}
+    .royal-nav .brand span{display:none;}
+    .royal-nav .nav-actions{gap:12px;}
+    .royal-nav .nav-links{gap:14px;}
+    .royal-nav .nav-links a{font-size:.74rem;letter-spacing:.1em;}
+  }
+  .guest-picker{
+    display:none;
+    max-width:680px;
+    margin:7vh auto 10vh;
+    padding:0 18px;
+  }
+  .guest-picker-card{
+    background:#FBF7EC;
+    border:1.5px solid var(--gold);
+    border-radius:4px;
+    box-shadow:0 30px 70px -25px rgba(43,36,32,0.38), 0 0 0 1px rgba(195,154,69,0.12);
+    padding:48px 46px 40px;
+    text-align:center;
+  }
+  .guest-picker-title{
+    font-size:1.45rem;
+    font-weight:700;
+    letter-spacing:.18em;
+    margin:0 0 10px;
+  }
+  .guest-picker-sub{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    color:var(--burgundy);
+    margin:0 0 28px;
+  }
+  .guest-choice{
+    display:block;
+    padding:14px 10px;
+    border-top:1px dotted rgba(43,36,32,0.18);
+    color:var(--ink);
+    text-decoration:none;
+    transition:color .2s, background .2s;
+  }
+  .guest-choice:last-child{border-bottom:1px dotted rgba(43,36,32,0.18);}
+  .guest-choice:hover{
+    color:var(--burgundy);
+    background:rgba(195,154,69,0.08);
+  }
+  .crest-medallion{
+    width:132px;
+    height:132px;
+    margin:0 auto 26px;
+    border-radius:50%;
+    border:1px solid rgba(195,154,69,0.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .crest-medallion::before{
+    content:"";
+    position:absolute;
+    inset:7px;
+    border:1px solid rgba(195,154,69,0.3);
+    border-radius:50%;
+  }
+  .crest-img{
+    width:92px;
+    display:block;
+    filter:drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+  }
+  .title-cn{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 8px;
+    letter-spacing:.22em;
+  }
+  .title-rule{
+    width:46px;
+    height:1px;
+    background:var(--gold);
+    margin:0 auto 30px;
+  }
+  .invitation-wrap,.guestlist-section{
+    max-width:680px;
+    margin:7vh auto 10vh;
+    padding:0 18px;
+  }
+  .invitation-wrap{display:none;}
+  .invitation,.guestlist-card{
+    position:relative;
+    background:#FBF7EC;
+    border:1.5px solid var(--gold);
+    border-radius:4px;
+    box-shadow:0 30px 70px -25px rgba(43,36,32,0.38), 0 0 0 1px rgba(195,154,69,0.12);
+  }
+  .invitation::before{
+    content:"";
+    position:absolute;
+    inset:9px;
+    border:1px solid rgba(195,154,69,0.55);
+    border-radius:2px;
+    pointer-events:none;
+  }
+  .inv-inner{
+    position:relative;
+    z-index:1;
+    padding:58px 52px 44px;
+    text-align:center;
+  }
+  .guestlist-card{
+    padding:50px 46px 40px;
+    text-align:center;
+  }
+  @media (max-width:576px){
+    .inv-inner{padding:42px 24px 32px;}
+    .guestlist-card{padding:36px 22px 30px;}
+  }
+  .lede{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-size:1rem;
+    line-height:2.1;
+    color:#5a4d3c;
+    max-width:420px;
+    margin:0 auto 34px;
+  }
+  .blank-line{
+    display:block;
+    width:100%;
+    max-width:380px;
+    height:1.7em;
+    margin:8px auto 22px;
+    border-bottom:1px solid rgba(195,154,69,0.65);
+  }
+  .blank-line.filled{
+    height:auto;
+    min-height:1.7em;
+    color:var(--burgundy-deep);
+    font-weight:600;
+    letter-spacing:.05em;
+  }
+  .narrative{
+    max-width:440px;
+    margin:0 auto 16px;
+    font-size:1rem;
+    line-height:2.15;
+    color:var(--ink);
+  }
+  .narrative .accent{color:var(--burgundy-deep);font-weight:600;letter-spacing:.03em;}
+  .narrative strong{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-weight:700;
+    font-size:1.18rem;
+    color:var(--ink);
+    letter-spacing:.05em;
+    display:inline-block;
+    margin:4px 0;
+  }
+  .narrative .date-line{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:1.2rem;
+    color:var(--purple);
+    display:block;
+    margin-top:14px;
+    letter-spacing:.03em;
+  }
+  .card-footer{
+    margin-top:38px;
+    text-align:center;
+    font-size:.88rem;
+    line-height:1.85;
+    color:#4a4034;
+  }
+  .footer-group{max-width:340px;margin:0 auto;}
+  .footer-label{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-size:.78rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:8px;
+  }
+  .footer-divider{
+    margin:22px auto;
+    width:160px;
+    height:1px;
+    background:linear-gradient(to right, transparent, var(--gold), transparent);
+    position:relative;
+  }
+  .footer-divider span{
+    position:absolute;
+    top:-8px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#FBF7EC;
+    padding:0 6px;
+    color:var(--gold);
+    font-size:.7rem;
+  }
+  .arrival-note{
+    margin-top:30px;
+    font-size:.88rem;
+    color:var(--ink);
+    text-align:center;
+  }
+  .footer-seal{
+    margin-top:40px;
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-size:.85rem;
+    color:#9c8d70;
+    letter-spacing:.18em;
+  }
+  .guestlist-title{
+    font-size:1.5rem;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .guestlist-sub{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-size:.92rem;
+    color:var(--burgundy);
+    letter-spacing:.06em;
+    margin-bottom:30px;
+  }
+  .guest-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.92rem;
+    color:var(--ink);
+  }
+  .guest-table th{
+    font-family:'Cormorant Garamond','Noto Serif TC',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    border-bottom:1px solid var(--hair);
+    padding:0 8px 10px;
+    text-align:left;
+  }
+  .guest-table th.num{width:34px;text-align:center;}
+  .guest-table td{
+    border-bottom:1px dotted rgba(43,36,32,0.18);
+    padding:13px 8px;
+    text-align:left;
+  }
+  .guest-table td.num{
+    text-align:center;
+    color:#9c8d70;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+  }
+  .guest-table td.fill{height:1.2em;}
+  .lang-switch{
+    text-align:center;
+    margin:0;
+    font-size:.78rem;
+    letter-spacing:.1em;
+    white-space:nowrap;
+  }
+  .lang-btn{
+    background:none;
+    border:none;
+    color:#9c8d70;
+    cursor:pointer;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:2px 4px;
+    transition:color .2s;
+  }
+  .lang-btn.active{color:var(--burgundy);font-weight:600;}
+  .lang-sep{color:var(--hair);margin:0 2px;}
+  .fade-up{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity 1s ease, transform 1s ease;
+  }
+  .fade-up.show{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){.fade-up{opacity:1;transform:none;transition:none;}}
+</style>
+</head>
+<body>
+<nav class="royal-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="state-banquet-nav.png" alt="赫斯維爾徽章">
+      <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-links">
+        <a href="index.html" class="i18n" data-zh="首頁" data-en="Home">首頁</a>
+        <a href="guest-list.html" class="i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
+        <a href="state-banquet.html" class="active i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
+      </div>
+      <div class="lang-switch" aria-label="語言切換">
+        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="bg-texture"></div>
+
+<div class="guest-picker" id="guest-picker">
+  <div class="guest-picker-card fade-up">
+    <h1 class="guest-picker-title i18n" data-zh="請示尊銜" data-en="May We Have Your Name">請示尊銜</h1>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=shunhe" data-zh="桂平親皇、外務總理<br>舜和殿下" data-en="His Highness The Imperial Prince, Minister of Foreign Affairs of United Empire of Great Qinghe">桂平親皇、外務總理<br>舜和殿下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=yunshen" data-zh="攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下" data-en="His Highness Regent Prince Ulrich, Duke of Portinmia, Prime Minister of Grandia">攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=tsai-yizhen" data-zh="羅斯維爾公爵、內閣總理大臣<br>蔡易甄閣下" data-en="His Grace The Duke of Rushwell, Prime Minister">羅斯維爾公爵、內閣總理大臣<br>蔡易甄閣下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=wang-youen" data-zh="赫米爾公爵、總務大臣<br>王佑恩閣下" data-en="His Grace The Duke of Hermier, Home Secretary">赫米爾公爵、總務大臣<br>王佑恩閣下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=andrew-wu" data-zh="華江斯坦君憲國首相、赫斯維爾服務騎士勳章騎士<br>吳憶祖閣下" data-en="The Right Honourable Andrew Wu, Prime Minister of Constitutional Monarchy State of Huajiangstan, MPH">華江斯坦君憲國首相、赫斯維爾服務騎士勳章騎士<br>吳憶祖閣下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=edwin-shen" data-zh="外務大臣及郵務大臣<br>沈育德閣下" data-en="The Honourable Edwin Shen, Postmaster General and Foreign Secretary">外務大臣及郵務大臣<br>沈育德閣下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=gerald-wong" data-zh="皇家映像官<br>王先生" data-en="Mr. Gerald Wong, the Court Photographer">皇家映像官<br>王先生</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=bonn-chen" data-zh="陳宗佑先生" data-en="Mr. Bonn Chen">陳宗佑先生</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=henry-lee" data-zh="李政翰先生" data-en="Mr. Henry Lee">李政翰先生</a>
+  </div>
+</div>
+
+<div class="invitation-wrap" id="invitation">
+  <div class="invitation fade-up">
+    <div class="inv-inner">
+      <div class="crest-medallion">
+        <img src="state-banquet-crest.png" alt="赫斯維爾國宴徽章" class="crest-img">
+      </div>
+
+      <h1 class="title-cn i18n" data-zh="宮廷大臣" data-en="The Grand Chamberlain">宮廷大臣</h1>
+      <div class="title-rule"></div>
+
+      <p class="lede i18n"
+         data-zh="當燈火升起，芬第夏宮燭光映照，金錦鋪席，玉杯陳列，謹以友誼之名迎接諸邦賓客。願今夜樂聲不絕、風儀長存，成為獻予尊貴來賓的一場盛典。"
+         data-en="As the lanterns rise and the palace candles glow, the hall is set with cloth of gold and goblets of jade, to welcome guests from every realm in friendship. May this evening be one of unbroken music and lasting grace, a fitting tribute to the honoured and the noble.">
+        當燈火升起，芬第夏宮燭光映照，金錦鋪席，玉杯陳列，謹以友誼之名迎接諸邦賓客。
+        願今夜樂聲不絕、風儀長存，成為獻予尊貴來賓的一場盛典。
+      </p>
+
+      <p class="narrative">
+        <span class="i18n" data-zh="奉殿下之命，謹此邀請" data-en="has received His Serene Highness's command to invite">奉殿下之命，謹此邀請</span>
+      </p>
+
+      <span class="blank-line" id="guest-name-line" title="國家 / 賓客姓名"></span>
+      <span class="blank-line" id="guest-title-line" title="賓客頭銜"></span>
+
+      <p class="narrative">
+        <span class="i18n" data-zh="蒞臨" data-en="to a State Banquet to be given at">蒞臨</span>
+        <span class="accent i18n" data-zh="芬第夏宮" data-en="Findeshia Palace">芬第夏宮</span>
+        <span class="i18n" data-zh="，出席由" data-en="by">，出席由</span>
+        <br>
+        <strong class="i18n" data-zh="赫斯維爾大公殿下" data-en="His Serene Highness the Grand Duke of Hershwell">赫斯維爾大公殿下</strong>
+        <br>
+        <span class="i18n" data-zh="為慶祝赫斯維爾公國國慶日所設之國宴" data-en="on the auspicious occasion of the National Day of Principality of Hershwell">為慶祝赫斯維爾公國國慶日所設之國宴</span>
+        <br>
+        <span class="date-line i18n" data-zh="二〇二六年七月三日，星期五，晚間七時三十分" data-en="on Friday, Third July, 2026 at 7:30 p.m.">二〇二六年七月三日，星期五，晚間七時三十分</span>
+      </p>
+
+      <div class="card-footer">
+        <div class="footer-group">
+          <div class="footer-label i18n" data-zh="敬請回覆" data-en="RSVP">敬請回覆</div>
+          <div class="i18n" data-zh="請將回覆送交：" data-en="A reply is requested to:">請將回覆送交：</div>
+          <div class="i18n" data-zh="宮廷大臣辦公室" data-en="The Grand Chamberlain">宮廷大臣辦公室</div>
+          <div class="i18n" data-zh="芬第夏宮" data-en="Findeshia Palace">芬第夏宮</div>
+          <div class="i18n" data-zh="雅倫公爵領" data-en="Duchy of Yalun">雅倫公爵領</div>
+        </div>
+
+        <div class="footer-divider"><span>◆</span></div>
+
+        <div class="footer-group">
+          <div class="footer-label i18n" data-zh="服裝規範" data-en="Dress Code">服裝規範</div>
+          <div class="i18n" data-zh="晚禮服" data-en="Evening Dress">晚禮服</div>
+          <div class="i18n" data-zh="（白領結或黑領結）" data-en="(White Tie or Black Tie),">（白領結或黑領結）</div>
+          <div class="i18n" data-zh="勳章或民族禮服" data-en="Decorations or National Dress">勳章或民族禮服</div>
+        </div>
+      </div>
+
+      <p class="arrival-note i18n"
+         data-zh="敬請賓客於晚間六時五十分至七時二十分抵達芬第夏宮。"
+         data-en="Guests are asked to arrive at Findeshia Palace between 6:50 and 7:20 p.m.">
+        敬請賓客於晚間六時五十分至七時二十分抵達芬第夏宮。
+      </p>
+
+      <div class="footer-seal">◆ Pro Rege, Pro Domino ◆</div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(function(){
+  var guestDirectory = {
+    'shunhe': {
+      zhName: '舜和殿下',
+      zhTitle: '桂平親皇、外務總理',
+      enName: 'His Highness The Imperial Prince',
+      enTitle: 'Minister of Foreign Affairs of United Empire of Great Qinghe'
+    },
+    'yunshen': {
+      zhName: '沈雲深殿下',
+      zhTitle: '攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長',
+      enName: 'His Highness Regent Prince Ulrich, Duke of Portinmia',
+      enTitle: 'Prime Minister of Grandia'
+    },
+    'tsai-yizhen': {
+      zhName: '蔡易甄閣下',
+      zhTitle: '羅斯維爾公爵、內閣總理大臣',
+      enName: 'His Grace The Duke of Rushwell',
+      enTitle: 'Prime Minister'
+    },
+    'wang-youen': {
+      zhName: '王佑恩閣下',
+      zhTitle: '赫米爾公爵、總務大臣',
+      enName: 'His Grace The Duke of Hermier',
+      enTitle: 'Home Secretary'
+    },
+    'andrew-wu': {
+      zhName: '吳憶祖閣下',
+      zhTitle: '華江斯坦君憲國首相、赫斯維爾服務騎士勳章騎士',
+      enName: 'The Right Honourable Andrew Wu, MPH',
+      enTitle: 'Prime Minister of Constitutional Monarchy State of Huajiangstan'
+    },
+    'edwin-shen': {
+      zhName: '沈育德閣下',
+      zhTitle: '外務大臣及郵務大臣',
+      enName: 'The Honourable Edwin Shen',
+      enTitle: 'Postmaster General and Foreign Secretary'
+    },
+    'gerald-wong': {
+      zhName: '王先生',
+      zhTitle: '皇家映像官',
+      enName: 'Mr. Gerald Wong',
+      enTitle: 'the Court Photographer'
+    },
+    'bonn-chen': {
+      zhName: '陳宗佑先生',
+      zhTitle: '',
+      enName: 'Mr. Bonn Chen',
+      enTitle: ''
+    },
+    'henry-lee': {
+      zhName: '李政翰先生',
+      zhTitle: '',
+      enName: 'Mr. Henry Lee',
+      enTitle: ''
+    }
+  };
+
+  var guestId = new URLSearchParams(window.location.search).get('guest');
+
+  function applyInvitationMode(){
+    var hasGuest = Boolean(guestDirectory[guestId]);
+    $('#guest-picker').toggle(!hasGuest);
+    $('#invitation').toggle(hasGuest);
+  }
+
+  function applyGuest(lang){
+    var guest = guestDirectory[guestId];
+    var $name = $('#guest-name-line');
+    var $title = $('#guest-title-line');
+    if (!guest) {
+      $name.add($title).text('').removeClass('filled');
+      return;
+    }
+    $name.text(guest[lang + 'Name']).addClass('filled');
+    if (guest[lang + 'Title']) {
+      $title.text(guest[lang + 'Title']).addClass('filled');
+    } else {
+      $title.text('').removeClass('filled');
+    }
+  }
+
+  function applyLanguage(lang){
+    $('.lang-btn').removeClass('active');
+    $('.lang-btn[data-lang="' + lang + '"]').addClass('active');
+    $('.i18n').each(function(){
+      var $el = $(this);
+      var txt = $el.attr('data-' + lang);
+      if (txt !== undefined) {
+        $el.html(txt);
+        $el.toggle(txt !== '');
+      }
+    });
+    applyGuest(lang);
+  }
+
+  applyInvitationMode();
+  applyLanguage(localStorage.getItem('banquetLang') || 'zh');
+
+  setTimeout(function(){
+    $('.invitation, .guestlist-card, .guest-picker-card').addClass('show');
+  }, 120);
+  $('.lang-btn').on('click', function(){
+    var lang = $(this).data('lang');
+    localStorage.setItem('banquetLang', lang);
+    applyLanguage(lang);
+  });
+});
+</script>
+</body>
+</html>
