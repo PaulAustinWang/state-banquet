@@ -4,8 +4,8 @@
 <title>赫斯維爾國宴 | 邀請函</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="state-banquet-nav.png">
-<link rel="apple-touch-icon" href="state-banquet-nav.png">
+<link rel="icon" type="image/png" href="assets/state-banquet-nav.png">
+<link rel="apple-touch-icon" href="assets/state-banquet-nav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -103,10 +103,10 @@
     .royal-nav .nav-inner{padding:0 14px;gap:10px;align-items:center;flex-wrap:wrap;}
     .royal-nav .brand img{width:56px;height:56px;}
     .royal-nav .brand span{display:none;}
-    .royal-nav .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;}
-    .royal-nav .nav-links{gap:10px;flex-wrap:nowrap;justify-content:flex-start;min-width:0;}
+    .royal-nav .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr;gap:8px;align-items:center;}
+    .royal-nav .nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-start;min-width:0;}
     .royal-nav .nav-links a{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;}
-    .lang-switch{font-size:.72rem;text-align:right;}
+    .lang-switch{font-size:.72rem;text-align:right;justify-self:end;}
   }
   .guest-picker{
     display:none;
@@ -399,7 +399,7 @@
 <nav class="royal-nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <img src="state-banquet-nav.png" alt="赫斯維爾徽章">
+      <img src="assets/state-banquet-nav.png" alt="赫斯維爾徽章">
       <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
     </a>
     <div class="nav-actions">
@@ -407,6 +407,7 @@
         <a href="index.html" class="i18n" data-zh="首頁" data-en="Home">首頁</a>
         <a href="guest-list.html" class="i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
         <a href="state-banquet.html" class="active i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
+        <a href="banquet-guidelines.html" class="i18n" data-zh="宴會規範" data-en="Guidelines">宴會規範</a>
       </div>
       <div class="lang-switch" aria-label="語言切換">
         <button type="button" class="lang-btn active" data-lang="zh">中文</button>
@@ -422,7 +423,7 @@
   <div class="guest-picker-card fade-up">
     <h1 class="guest-picker-title i18n" data-zh="請示尊銜" data-en="May We Have Your Name">請示尊銜</h1>
     <a class="guest-choice i18n" href="state-banquet.html?guest=shunhe" data-zh="桂平親皇、外務總理<br>舜和殿下" data-en="His Highness The Imperial Prince, Minister of Foreign Affairs of United Empire of Great Qinghe">桂平親皇、外務總理<br>舜和殿下</a>
-    <a class="guest-choice i18n" href="state-banquet.html?guest=yunshen" data-zh="攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下" data-en="His Highness Regent Prince Ulrich, Duke of Portinmia, Prime Minister of Grandia">攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下</a>
+    <a class="guest-choice i18n" href="state-banquet.html?guest=yunshen" data-zh="攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下" data-en="His Highness Regent Prince Ulrich, Duke of Portinmia, Prime Minister of Grandia-Augenore">攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下</a>
     <a class="guest-choice i18n" href="state-banquet.html?guest=tsai-yizhen" data-zh="羅斯維爾公爵、內閣總理大臣<br>蔡易甄閣下" data-en="His Grace The Duke of Rushwell, Prime Minister">羅斯維爾公爵、內閣總理大臣<br>蔡易甄閣下</a>
     <a class="guest-choice i18n" href="state-banquet.html?guest=wang-youen" data-zh="赫米爾公爵、總務大臣<br>王佑恩閣下" data-en="His Grace The Duke of Hermier, Home Secretary">赫米爾公爵、總務大臣<br>王佑恩閣下</a>
     <a class="guest-choice i18n" href="state-banquet.html?guest=andrew-wu" data-zh="華江斯坦君憲國首相、赫斯維爾服務騎士勳章騎士<br>吳憶祖閣下" data-en="The Right Honourable Andrew Wu, Prime Minister of Constitutional Monarchy State of Huajiangstan, MPH">華江斯坦君憲國首相、赫斯維爾服務騎士勳章騎士<br>吳憶祖閣下</a>
@@ -437,7 +438,7 @@
   <div class="invitation fade-up">
     <div class="inv-inner">
       <div class="crest-medallion">
-        <img src="state-banquet-crest.png" alt="赫斯維爾國宴徽章" class="crest-img">
+        <img src="assets/state-banquet-crest.png" alt="赫斯維爾國宴徽章" class="crest-img">
       </div>
 
       <h1 class="title-cn i18n" data-zh="宮廷大臣" data-en="The Grand Chamberlain">宮廷大臣</h1>
@@ -462,7 +463,7 @@
         <span class="accent i18n" data-zh="芬第夏宮" data-en="Findeshia Palace">芬第夏宮</span>
         <span class="i18n" data-zh="，出席由" data-en="by">，出席由</span>
         <br>
-        <strong class="i18n" data-zh="赫斯維爾大公殿下" data-en="His Serene Highness the Grand Duke of Hershwell">赫斯維爾大公殿下</strong>
+        <strong class="i18n" data-zh="赫斯維爾大公殿下" data-en="His Serene Highness the Prince of Hershwell">赫斯維爾大公殿下</strong>
         <br>
         <span class="i18n" data-zh="為慶祝赫斯維爾公國國慶日所設之國宴" data-en="on the auspicious occasion of the National Day of Principality of Hershwell">為慶祝赫斯維爾公國國慶日所設之國宴</span>
         <br>
@@ -513,7 +514,7 @@ $(function(){
       zhName: '沈雲深殿下',
       zhTitle: '攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長',
       enName: 'His Highness Regent Prince Ulrich, Duke of Portinmia',
-      enTitle: 'Prime Minister of Grandia'
+      enTitle: 'Prime Minister of Grandia-Augenore'
     },
     'tsai-yizhen': {
       zhName: '蔡易甄閣下',
@@ -612,3 +613,4 @@ $(function(){
 </script>
 </body>
 </html>
+

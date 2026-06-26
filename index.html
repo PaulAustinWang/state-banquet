@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>赫斯維爾國宴 | 首頁</title>
-<link rel="icon" type="image/png" href="state-banquet-nav.png">
-<link rel="apple-touch-icon" href="state-banquet-nav.png">
+<link rel="icon" type="image/png" href="assets/state-banquet-nav.png">
+<link rel="apple-touch-icon" href="assets/state-banquet-nav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -275,10 +275,10 @@
     .nav-inner{align-items:center;flex-wrap:wrap;gap:10px;}
     .brand img{width:56px;height:56px;}
     .brand span{display:none;}
-    .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;}
-    .nav-links{gap:10px;flex-wrap:nowrap;justify-content:flex-start;min-width:0;}
+    .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr;gap:8px;align-items:center;}
+    .nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-start;min-width:0;}
     .nav-links a{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;}
-    .lang-switch{font-size:.72rem;text-align:right;}
+    .lang-switch{font-size:.72rem;text-align:right;justify-self:end;}
     .hero{grid-template-columns:1fr;margin-top:26px;gap:24px;}
     .hero-actions{gap:10px;}
     .royal-link{width:100%;text-align:center;}
@@ -298,7 +298,7 @@
 <nav class="royal-nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <img src="state-banquet-nav.png" alt="赫斯維爾徽章">
+      <img src="assets/state-banquet-nav.png" alt="赫斯維爾徽章">
       <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
     </a>
     <div class="nav-actions">
@@ -306,6 +306,7 @@
         <a href="index.html" class="active i18n" data-zh="首頁" data-en="Home">首頁</a>
         <a href="guest-list.html" class="i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
         <a href="state-banquet.html" class="i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
+        <a href="banquet-guidelines.html" class="i18n" data-zh="宴會規範" data-en="Guidelines">宴會規範</a>
       </div>
       <div class="lang-switch" aria-label="語言切換">
         <button type="button" class="lang-btn active" data-lang="zh">中文</button>
@@ -328,7 +329,7 @@
       </div>
     </div>
     <div class="flag-frame">
-      <img src="royal-flag.png" alt="赫斯維爾皇家旗">
+      <img src="assets/royal-flag.png" alt="赫斯維爾皇家旗">
     </div>
   </section>
 
@@ -338,13 +339,13 @@
       <p class="section-note i18n" data-zh="禮儀、祝酒與賓客合影" data-en="Ceremony, toast, and honoured company">禮儀、祝酒與賓客合影</p>
     </div>
     <div class="photo-grid">
-      <div class="photo-tile featured-photo"><button class="photo-button" type="button"><img src="banquet-2025-group.jpg" alt="去年國宴賓客合影"></button></div>
-      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-certificate.jpg" alt="去年國宴授函儀式"></button></div>
-      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-toast.jpg" alt="去年國宴祝酒時刻"></button></div>
-      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="banquet-2025-violin.jpg" alt="去年國宴小提琴演奏"></button></div>
-      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-chess.jpg" alt="去年國宴棋局時刻"></button></div>
-      <div class="photo-tile"><button class="photo-button" type="button"><img src="banquet-2025-celebration.jpg" alt="去年國宴歡慶時刻"></button></div>
-      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="banquet-2025-reception.jpg" alt="去年國宴宴會時刻"></button></div>
+      <div class="photo-tile featured-photo"><button class="photo-button" type="button"><img src="assets/banquet-2025-group.jpg" alt="去年國宴賓客合影"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="assets/banquet-2025-certificate.jpg" alt="去年國宴授函儀式"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="assets/banquet-2025-toast.jpg" alt="去年國宴祝酒時刻"></button></div>
+      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="assets/banquet-2025-violin.jpg" alt="去年國宴小提琴演奏"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="assets/banquet-2025-chess.jpg" alt="去年國宴棋局時刻"></button></div>
+      <div class="photo-tile"><button class="photo-button" type="button"><img src="assets/banquet-2025-celebration.jpg" alt="去年國宴歡慶時刻"></button></div>
+      <div class="photo-tile wide"><button class="photo-button" type="button"><img src="assets/banquet-2025-reception.jpg" alt="去年國宴宴會時刻"></button></div>
     </div>
   </section>
 </main>
@@ -396,3 +397,4 @@ $(function(){
 </script>
 </body>
 </html>
+

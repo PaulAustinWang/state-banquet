@@ -4,8 +4,8 @@
 <title>赫斯維爾國宴 | 受邀名單</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="state-banquet-nav.png">
-<link rel="apple-touch-icon" href="state-banquet-nav.png">
+<link rel="icon" type="image/png" href="assets/state-banquet-nav.png">
+<link rel="apple-touch-icon" href="assets/state-banquet-nav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -103,10 +103,10 @@
     .royal-nav .nav-inner{padding:0 14px;gap:10px;align-items:center;flex-wrap:wrap;}
     .royal-nav .brand img{width:56px;height:56px;}
     .royal-nav .brand span{display:none;}
-    .royal-nav .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;}
-    .royal-nav .nav-links{gap:10px;flex-wrap:nowrap;justify-content:flex-start;min-width:0;}
+    .royal-nav .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr;gap:8px;align-items:center;}
+    .royal-nav .nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-start;min-width:0;}
     .royal-nav .nav-links a{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;}
-    .lang-switch{font-size:.72rem;text-align:right;}
+    .lang-switch{font-size:.72rem;text-align:right;justify-self:end;}
   }
   .crest-medallion{
     width:132px;
@@ -366,7 +366,7 @@
 <nav class="royal-nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <img src="state-banquet-nav.png" alt="赫斯維爾徽章">
+      <img src="assets/state-banquet-nav.png" alt="赫斯維爾徽章">
       <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
     </a>
     <div class="nav-actions">
@@ -374,6 +374,7 @@
         <a href="index.html" class="i18n" data-zh="首頁" data-en="Home">首頁</a>
         <a href="guest-list.html" class="active i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
         <a href="state-banquet.html" class="i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
+        <a href="banquet-guidelines.html" class="i18n" data-zh="宴會規範" data-en="Guidelines">宴會規範</a>
       </div>
       <div class="lang-switch" aria-label="語言切換">
         <button type="button" class="lang-btn active" data-lang="zh">中文</button>
@@ -407,7 +408,7 @@
         <tr>
           <td class="num">02</td>
           <td class="fill guest-entry">
-            <a class="guest-link i18n" href="state-banquet.html?guest=yunshen" data-zh="攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下" data-en="His Highness Regent Prince Ulrich, Duke of Portinmia, Prime Minister of Grandia">攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下</a>
+            <a class="guest-link i18n" href="state-banquet.html?guest=yunshen" data-zh="攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下" data-en="His Highness Regent Prince Ulrich, Duke of Portinmia, Prime Minister of Grandia-Augenore">攝政鄔里伊希親王、布丁米亞公爵、內閣總理總長<br>沈雲深殿下</a>
           </td>
         </tr>
         <tr>
@@ -490,3 +491,4 @@ $(function(){
 </script>
 </body>
 </html>
+
