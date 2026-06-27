@@ -1,235 +1,48 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>赫斯維爾國宴 | 宴會規範</title>
+<meta name="description" content="赫斯維爾國宴入席禮、著裝、抵達與席間禮儀。">
+<meta name="theme-color" content="#6B1722">
+<meta property="og:type" content="website">
+<meta property="og:title" content="赫斯維爾國宴宴會規範">
+<meta property="og:description" content="赴宴所需留意之入席禮、著裝、抵達與席間禮節。">
+<meta property="og:url" content="https://paulaustinwang.github.io/state-banquet/banquet-guidelines.html">
+<meta property="og:image" content="https://paulaustinwang.github.io/state-banquet/assets/royal-flag.png">
+<link rel="canonical" href="https://paulaustinwang.github.io/state-banquet/banquet-guidelines.html">
 <link rel="icon" type="image/png" href="assets/state-banquet-nav.png">
 <link rel="apple-touch-icon" href="assets/state-banquet-nav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#F7F2E7;
-    --ink:#2B2420;
-    --burgundy:#6B1722;
-    --burgundy-deep:#4E0F18;
-    --gold:#C39A45;
-    --hair:rgba(195,154,69,0.45);
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Noto Serif TC',serif;
-    letter-spacing:.02em;
-    overflow-x:hidden;
-  }
-  .bg-texture{
-    position:fixed;
-    inset:0;
-    z-index:-2;
-    background:radial-gradient(circle at 50% 0%, rgba(195,154,69,0.08), transparent 60%), var(--cream);
-  }
-  .royal-nav{
-    background:#FBF7EC;
-    border-bottom:1px solid var(--hair);
-    padding:12px 0;
-  }
-  .nav-inner{
-    max-width:1120px;
-    margin:0 auto;
-    padding:0 20px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:22px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    font-family:'Cormorant Garamond','Noto Serif TC',serif;
-    font-size:1.42rem;
-    font-weight:600;
-    letter-spacing:.08em;
-    color:var(--ink);
-    text-decoration:none;
-  }
-  .brand img{
-    width:72px;
-    height:72px;
-    object-fit:contain;
-  }
-  .nav-actions{
-    display:flex;
-    align-items:center;
-    gap:24px;
-    margin-left:auto;
-  }
-  .nav-links{
-    display:flex;
-    align-items:center;
-    gap:22px;
-  }
-  .nav-links a{
-    color:#6b5f4d;
-    font-size:.85rem;
-    letter-spacing:.14em;
-    text-decoration:none;
-    text-transform:uppercase;
-    padding-bottom:3px;
-    border-bottom:1px solid transparent;
-  }
-  .nav-links a:hover,
-  .nav-links a.active{
-    color:var(--burgundy);
-    border-color:var(--gold);
-  }
-  .lang-switch{
-    white-space:nowrap;
-    font-size:.78rem;
-    letter-spacing:.1em;
-  }
-  .lang-btn{
-    background:none;
-    border:none;
-    color:#9c8d70;
-    cursor:pointer;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    padding:2px 4px;
-  }
-  .lang-btn.active{
-    color:var(--burgundy);
-    font-weight:600;
-  }
-  .lang-sep{color:var(--hair);}
-  .page-wrap{
-    max-width:860px;
-    margin:7vh auto 10vh;
-    padding:0 18px;
-  }
-  .guidelines-card{
-    background:#FBF7EC;
-    border:1.5px solid var(--gold);
-    border-radius:4px;
-    box-shadow:0 30px 70px -25px rgba(43,36,32,0.38), 0 0 0 1px rgba(195,154,69,0.12);
-    padding:54px 54px 46px;
-  }
-  .page-title{
-    margin:0;
-    text-align:center;
-    font-size:1.65rem;
-    font-weight:700;
-    letter-spacing:.22em;
-  }
-  .page-subtitle{
-    max-width:560px;
-    margin:18px auto 34px;
-    text-align:center;
-    color:#5a4d3c;
-    line-height:2;
-    font-family:'Cormorant Garamond','Noto Serif TC',serif;
-    font-style:italic;
-  }
-  .title-rule{
-    width:56px;
-    height:1px;
-    background:var(--gold);
-    margin:0 auto 34px;
-  }
-  .guideline-list{
-    display:grid;
-    gap:22px;
-  }
-  .guideline-item{
-    border-top:1px solid rgba(195,154,69,0.45);
-    padding-top:22px;
-  }
-  .guideline-item h2{
-    margin:0 0 8px;
-    color:var(--burgundy-deep);
-    font-size:1.05rem;
-    letter-spacing:.14em;
-  }
-  .guideline-item p{
-    margin:0;
-    color:#3f352d;
-    line-height:2.05;
-    font-size:.98rem;
-  }
-  .closing-note{
-    margin:34px auto 0;
-    max-width:560px;
-    text-align:center;
-    color:#6b5f4d;
-    line-height:2;
-    font-size:.92rem;
-  }
-  @media (max-width:760px){
-    .nav-inner{align-items:center;flex-wrap:wrap;gap:10px;}
-    .brand img{width:56px;height:56px;}
-    .brand span{display:none;}
-    .nav-actions{width:100%;margin-left:0;display:grid;grid-template-columns:1fr;gap:8px;align-items:center;}
-    .nav-links{gap:10px;flex-wrap:wrap;justify-content:flex-start;min-width:0;}
-    .nav-links a{font-size:.72rem;letter-spacing:.06em;white-space:nowrap;}
-    .lang-switch{font-size:.72rem;text-align:right;justify-self:end;}
-    .guidelines-card{padding:38px 22px 32px;}
-    .page-title{font-size:1.42rem;letter-spacing:.14em;}
-    .page-subtitle{line-height:1.85;}
-    .guideline-item h2{letter-spacing:.08em;}
-  }
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/site.js"></script>
 </head>
 <body>
 <div class="bg-texture"></div>
-<nav class="royal-nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <img src="assets/state-banquet-nav.png" alt="赫斯維爾徽章">
-      <span class="i18n" data-zh="赫斯維爾國宴" data-en="State Banquet of Hershwell">赫斯維爾國宴</span>
-    </a>
-    <div class="nav-actions">
-      <div class="nav-links">
-        <a href="index.html" class="i18n" data-zh="首頁" data-en="Home">首頁</a>
-        <a href="guest-list.html" class="i18n" data-zh="賓客名單" data-en="Guest List">賓客名單</a>
-        <a href="state-banquet.html" class="i18n" data-zh="邀請函" data-en="Invitation">邀請函</a>
-        <a href="banquet-guidelines.html" class="active i18n" data-zh="宴會規範" data-en="Guidelines">宴會規範</a>
-      </div>
-      <div class="lang-switch" aria-label="語言切換">
-        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
-        <span class="lang-sep">/</span>
-        <button type="button" class="lang-btn" data-lang="en">English</button>
-      </div>
-    </div>
-  </div>
-</nav>
+<header id="site-nav" data-active="guidelines"></header>
 
-<main class="page-wrap">
-  <section class="guidelines-card">
+<main class="guidelines-wrap">
+  <section class="guidelines-card fade-up">
     <h1 class="page-title i18n" data-zh="宴會規範" data-en="Banquet Guidelines">宴會規範</h1>
     <p class="page-subtitle i18n" data-zh="謹列赴宴所需留意之禮節，以使諸位貴賓得以從容入席，共襄盛典。" data-en="The following courtesies are offered so that honoured guests may enter the evening with ease, grace, and due ceremony.">謹列赴宴所需留意之禮節，以使諸位貴賓得以從容入席，共襄盛典。</p>
     <div class="title-rule"></div>
 
     <div class="guideline-list">
       <section class="guideline-item">
-        <h2 class="i18n" data-zh="入席禮" data-en="Token of Attendance">入席禮</h2>
-        <p class="i18n" data-zh="為共備宴席、增添席間雅興，敬請每位來賓惠攜一瓶美酒，或一份可供同席分享之餐食。" data-en="In the spirit of shared hospitality, each guest is respectfully invited to bring either a bottle of wine or a dish suitable for sharing.">為共備宴席、增添席間雅興，敬請每位來賓惠攜一瓶美酒，或一份可供同席分享之餐食。此非門票，乃賓主共襄盛會之雅意。</p>
+        <h2 class="i18n" data-zh="入席禮" data-en="A Courtesy for the Table">入席禮</h2>
+        <p class="i18n" data-zh="為共襄宴席、增添席間雅興，敬請每位來賓惠攜一瓶美酒，作為入席之雅意。" data-en="In the spirit of shared hospitality, each guest is respectfully invited to bring a bottle of wine as a courtesy for the banquet table.">為共襄宴席、增添席間雅興，敬請每位來賓惠攜一瓶美酒，作為入席之雅意。</p>
       </section>
-
       <section class="guideline-item">
         <h2 class="i18n" data-zh="著裝" data-en="Dress">著裝</h2>
         <p class="i18n" data-zh="服裝敬請以正式晚宴禮服為宜。男賓請以領結為主，可著黑領結、深色西裝或相應禮服；女賓請著晚禮服、正式洋裝或相稱之典禮服飾。勳章、徽飾及民族禮服均可酌情配戴。" data-en="Formal evening attire is requested. Gentlemen are encouraged to wear a bow tie with black tie, a dark suit, or equivalent formal dress. Ladies may wear evening gowns, formal dresses, or appropriate ceremonial attire. Decorations, insignia, and national dress are welcome where suitable.">服裝敬請以正式晚宴禮服為宜。男賓請以領結為主，可著黑領結、深色西裝或相應禮服；女賓請著晚禮服、正式洋裝或相稱之典禮服飾。勳章、徽飾及民族禮服均可酌情配戴。</p>
       </section>
-
       <section class="guideline-item">
         <h2 class="i18n" data-zh="抵達" data-en="Arrival">抵達</h2>
         <p class="i18n" data-zh="敬請貴賓依邀請函所列時段抵達芬第夏宮。若需稍晚入席，請預先告知宮廷大臣辦公室，以便妥善安排席次與迎賓。" data-en="Guests are kindly asked to arrive within the time stated on the invitation. Should a later arrival be necessary, prior notice to the Office of the Grand Chamberlain would be appreciated.">敬請貴賓依邀請函所列時段抵達芬第夏宮。若需稍晚入席，請預先告知宮廷大臣辦公室，以便妥善安排席次與迎賓。</p>
       </section>
-
       <section class="guideline-item">
         <h2 class="i18n" data-zh="席間禮儀" data-en="Table Courtesy">席間禮儀</h2>
         <p class="i18n" data-zh="席間請以莊重、親切之態相待。祝酒、致意及合影請依現場安排進行；若有飲食禁忌或不便飲酒之處，亦請從容告知，均將予以尊重。" data-en="Guests are asked to observe a manner both dignified and cordial. Toasts, greetings, and photographs will follow the order of the evening. Dietary restrictions or abstention from alcohol may be noted freely and will be respected.">席間請以莊重、親切之態相待。祝酒、致意及合影請依現場安排進行；若有飲食禁忌或不便飲酒之處，亦請從容告知，均將予以尊重。</p>
@@ -239,31 +52,6 @@
     <p class="closing-note i18n" data-zh="願諸位貴賓以從容之儀、友誼之心蒞臨，共成赫斯維爾國宴之盛。" data-en="May all honoured guests arrive in grace and friendship, and together bring splendour to the State Banquet of Hershwell.">願諸位貴賓以從容之儀、友誼之心蒞臨，共成赫斯維爾國宴之盛。</p>
   </section>
 </main>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script>
-$(function(){
-  function applyLanguage(lang){
-    $('.lang-btn').removeClass('active');
-    $('.lang-btn[data-lang="' + lang + '"]').addClass('active');
-    $('.i18n').each(function(){
-      var $el = $(this);
-      var txt = $el.attr('data-' + lang);
-      if (txt !== undefined) {
-        $el.html(txt);
-      }
-    });
-  }
-  applyLanguage(localStorage.getItem('banquetLang') || 'zh');
-  $('.lang-btn').on('click', function(){
-    var lang = $(this).data('lang');
-    localStorage.setItem('banquetLang', lang);
-    applyLanguage(lang);
-  });
-});
-</script>
+<footer class="site-footer" id="site-footer"></footer>
 </body>
 </html>
-
-
-
