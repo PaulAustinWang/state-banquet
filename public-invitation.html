@@ -18,15 +18,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<script defer src="assets/js/site.js"></script>
 </head>
 <body>
 <div class="bg-texture"></div>
-<header id="site-nav"></header>
 
 <main class="public-invitation-wrap">
   <article class="public-invitation fade-up">
     <div class="public-invitation-inner">
+      <div class="lang-switch standalone-language" aria-label="語言切換">
+        <button type="button" class="lang-btn active" data-lang="zh">中文</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
       <div class="crest-medallion">
         <img src="assets/state-banquet-crest.png" alt="赫斯維爾國宴徽章" class="crest-img">
       </div>
@@ -69,7 +72,27 @@
     </div>
   </article>
 </main>
-
-<footer class="site-footer" id="site-footer"></footer>
+<script>
+(function(){
+  function applyLanguage(lang){
+    document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
+    document.querySelectorAll('.lang-btn').forEach(function(button){
+      button.classList.toggle('active',button.dataset.lang===lang);
+    });
+    document.querySelectorAll('.i18n').forEach(function(element){
+      var text=element.getAttribute('data-'+lang);
+      if(text!==null){element.innerHTML=text;}
+    });
+  }
+  document.addEventListener('click',function(event){
+    var button=event.target.closest('.lang-btn');
+    if(!button){return;}
+    localStorage.setItem('publicInvitationLang',button.dataset.lang);
+    applyLanguage(button.dataset.lang);
+  });
+  applyLanguage(localStorage.getItem('publicInvitationLang')||'zh');
+  requestAnimationFrame(function(){document.querySelector('.fade-up').classList.add('show');});
+})();
+</script>
 </body>
 </html>
