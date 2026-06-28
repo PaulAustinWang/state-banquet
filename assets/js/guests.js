@@ -44,7 +44,7 @@ window.BANQUET_GUESTS = [
   {
     id:'rustam-bai',
     zhName:'白庭瑋閣下',
-    zhTitle:'安全理事會主席',
+    zhTitle:'拜然尼亞安全理事會主席',
     enName:'His Excellency Rustam Bai',
     enTitle:'Chairman of the Security Council of Baijan Federal Republic'
   },
