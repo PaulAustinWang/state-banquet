@@ -42,6 +42,13 @@ window.BANQUET_GUESTS = [
     enTitle:'Postmaster General and Foreign Secretary'
   },
   {
+    id:'rustam-bai',
+    zhName:'白庭瑋閣下',
+    zhTitle:'安全理事會主席',
+    enName:'His Excellency Rustam Bai',
+    enTitle:'Chairman of the Security Council of Baijan Federal Republic'
+  },
+  {
     id:'gerald-wong',
     zhName:'王先生',
     zhTitle:'皇家映像官',
