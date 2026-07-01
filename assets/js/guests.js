@@ -45,7 +45,7 @@ window.BANQUET_GUESTS = [
     id:'yu-shun-chiu',
     zhName:'邱昱舜',
     zhTitle:'臺朗共和國攝政',
-    enName:'Yu-Shun Chiu',
+    enName:'His Excellency Yu-Shun Chiu',
     enTitle:'Regent of Republik Taireich'
   },
   {
