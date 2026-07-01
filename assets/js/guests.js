@@ -35,13 +35,6 @@ window.BANQUET_GUESTS = [
     enTitle:'Prime Minister of Constitutional Monarchy State of Huajiangstan'
   },
   {
-    id:'edwin-shen',
-    zhName:'沈育德閣下',
-    zhTitle:'外務大臣及郵務大臣',
-    enName:'The Honourable Edwin Shen',
-    enTitle:'Postmaster General and Foreign Secretary'
-  },
-  {
     id:'rustam-bai',
     zhName:'白庭瑋閣下',
     zhTitle:'拜然尼亞安全理事會主席',
