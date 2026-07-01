@@ -37,7 +37,7 @@ window.BANQUET_GUESTS = [
   {
     id:'andrew-wu',
     zhName:'吳憶祖閣下',
-    zhTitle:'華江斯坦君憲國首相、赫斯維爾服務員佐勳章騎士',
+    zhTitle:'華江斯坦君憲國首相、赫斯維爾公國員佐勳章騎士',
     enName:'The Right Honourable Andrew Wu, MPH',
     enTitle:'Prime Minister of Constitutional Monarchy State of Huajiangstan'
   },
