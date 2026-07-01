@@ -24,6 +24,12 @@
     if(!guest){return;}
     var name = document.getElementById('guest-name-line');
     var title = document.getElementById('guest-title-line');
+    var parent = name.parentNode;
+    if(lang === 'zh'){
+      parent.insertBefore(title,name);
+    }else{
+      parent.insertBefore(name,title);
+    }
     name.textContent = guest[lang + 'Name'];
     name.classList.add('filled');
     var titleText = guest[lang + 'Title'];

@@ -28,6 +28,13 @@ window.BANQUET_GUESTS = [
     enTitle:'Home Secretary'
   },
   {
+    id:'duke-of-druet',
+    zhName:'黃羿學閣下',
+    zhTitle:'德魯特公爵',
+    enName:'His Grace Duke of Druet',
+    enTitle:''
+  },
+  {
     id:'andrew-wu',
     zhName:'吳憶祖閣下',
     zhTitle:'華江斯坦君憲國首相、赫斯維爾服務員佐勳章騎士',
@@ -47,13 +54,6 @@ window.BANQUET_GUESTS = [
     zhTitle:'臺朗共和國攝政',
     enName:'Yu-Shun Chiu',
     enTitle:'Regent of Republik Taireich'
-  },
-  {
-    id:'duke-of-druet',
-    zhName:'黃羿學閣下',
-    zhTitle:'德魯特公爵',
-    enName:'His Grace Duke of Druet',
-    enTitle:''
   },
   {
     id:'gerald-wong',
