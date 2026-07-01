@@ -49,6 +49,13 @@ window.BANQUET_GUESTS = [
     enTitle:'Chairman of the Security Council of Baijan Federal Republic'
   },
   {
+    id:'yu-shun-chiu',
+    zhName:'邱昱舜',
+    zhTitle:'臺朗共和國攝政',
+    enName:'Yu-Shun Chiu',
+    enTitle:'Regent of Republik Taireich'
+  },
+  {
     id:'gerald-wong',
     zhName:'王先生',
     zhTitle:'皇家映像官',
