@@ -56,6 +56,13 @@ window.BANQUET_GUESTS = [
     enTitle:'Regent of Republik Taireich'
   },
   {
+    id:'duke-of-druet',
+    zhName:'黃羿學閣下',
+    zhTitle:'德魯特公爵',
+    enName:'His Grace Duke of Druet',
+    enTitle:''
+  },
+  {
     id:'gerald-wong',
     zhName:'王先生',
     zhTitle:'皇家映像官',
