@@ -1,8 +1,8 @@
 window.BANQUET_GUESTS = [
   {
     id:'shunhe',
-    zhName:'桂平親皇舜和殿下',
-    zhTitle:'皇室首席理事官、外務總理',
+    zhName:'舜和殿下',
+    zhTitle:'桂平親皇、皇室首席理事官、外務總理',
     enName:'His Highness the Imperial Prince of Guiping',
     enTitle:'Chief Minister of Imperial Affairs, Premier of Foreign Affairs'
   },
