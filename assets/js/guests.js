@@ -42,13 +42,6 @@ window.BANQUET_GUESTS = [
     enTitle:'Prime Minister of Constitutional Monarchy State of Huajiangstan'
   },
   {
-    id:'rustam-bai',
-    zhName:'白庭瑋閣下',
-    zhTitle:'拜然尼亞安全理事會主席',
-    enName:'His Excellency Rustam Bai',
-    enTitle:'Chairman of the Security Council of Baijan Federal Republic'
-  },
-  {
     id:'yu-shun-chiu',
     zhName:'邱昱舜',
     zhTitle:'臺朗共和國攝政',
