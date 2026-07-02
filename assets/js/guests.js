@@ -50,7 +50,7 @@ window.BANQUET_GUESTS = [
   },
   {
     id:'borjigin-nergui',
-    zhName:'孛兒只斤·涅爾女士',
+    zhName:'孛兒只斤·涅爾桂',
     zhTitle:'臺朗共和國語言改造委員會語文法小組組長',
     enName:'Ms. Borjigin Nergui',
     enTitle:''
