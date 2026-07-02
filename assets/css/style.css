@@ -248,6 +248,66 @@ img{max-width:100%;}
 .information-item a{color:var(--burgundy);}
 .information-item.full{grid-column:1/-1;}
 
+/* Ceremonial seating plan */
+.seating-wrap{width:min(1180px,100%);margin:7vh auto 10vh;padding:0 18px;}
+.seating-card{
+  position:relative;
+  overflow:hidden;
+  background:var(--paper);
+  border:1.5px solid var(--gold);
+  border-radius:4px;
+  box-shadow:0 30px 70px -25px rgba(43,36,32,.38),0 0 0 1px rgba(195,154,69,.12);
+  padding:50px 42px 42px;
+}
+.seating-card::before{content:'';position:absolute;inset:9px;border:1px solid rgba(195,154,69,.38);pointer-events:none;}
+.seating-header{position:relative;z-index:1;text-align:center;}
+.seating-crest{width:112px;height:112px;margin-bottom:20px;}
+.seating-crest .crest-img{width:76px;}
+.seating-kicker{margin:0 0 7px;color:var(--burgundy);font-family:'Cormorant Garamond','Noto Serif TC',serif;font-size:.82rem;font-style:italic;letter-spacing:.24em;text-transform:uppercase;}
+.seating-board{position:relative;z-index:1;margin-top:38px;}
+.seating-side-label{display:flex;align-items:center;justify-content:space-between;margin:0 2px 10px;color:var(--muted);font-size:.74rem;letter-spacing:.14em;}
+.seating-side-label.main{margin-top:10px;margin-bottom:0;}
+.seat-row{display:grid;gap:10px;}
+.seat-row.opposite{grid-template-columns:repeat(6,minmax(0,1fr));}
+.seat-row.main{grid-template-columns:repeat(7,minmax(0,1fr));}
+.seat{
+  min-height:104px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  border:1px solid rgba(195,154,69,.48);
+  border-top:3px solid var(--purple);
+  background:rgba(255,255,255,.35);
+  padding:12px 8px;
+  text-align:center;
+}
+.seat.home{border-top-color:var(--gold);}
+.seat.host{border-color:var(--burgundy);border-top-color:var(--burgundy);background:var(--burgundy);color:#fff;}
+.seat-number{color:#9c8d70;font-family:'Cormorant Garamond',serif;font-size:.72rem;font-style:italic;letter-spacing:.08em;}
+.seat.host .seat-number{color:rgba(255,255,255,.72);}
+.seat-name{font-size:.86rem;font-weight:600;line-height:1.65;overflow-wrap:anywhere;}
+.seat.host .seat-name{font-size:.93rem;}
+.banquet-table{
+  min-height:132px;
+  margin:14px 4%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  border:1px solid var(--gold);
+  background:var(--burgundy-deep);
+  color:#fff;
+  box-shadow:inset 0 0 0 7px rgba(195,154,69,.2),0 18px 34px -24px rgba(43,36,32,.65);
+  text-align:center;
+}
+.table-seal{width:54px;height:54px;object-fit:contain;}
+.table-copy span,.table-copy strong{display:block;}
+.table-copy span{color:#dcc48e;font-family:'Cormorant Garamond','Noto Serif TC',serif;font-size:.78rem;font-style:italic;letter-spacing:.2em;text-transform:uppercase;}
+.table-copy strong{margin-top:7px;font-size:1.08rem;letter-spacing:.18em;}
+.seating-note{position:relative;z-index:1;max-width:660px;margin:34px auto 0;color:var(--muted);font-size:.86rem;line-height:1.9;text-align:center;}
+
 /* Shared footer */
 .site-footer{background:var(--paper);border-top:1px solid var(--hair);}
 .footer-inner{width:min(1120px,100%);margin:0 auto;padding:30px 20px;display:flex;align-items:center;justify-content:space-between;gap:28px;}
@@ -293,6 +353,17 @@ img{max-width:100%;}
   .information-card{padding:36px 22px 30px;}
   .information-grid{grid-template-columns:1fr;}
   .information-item.full{grid-column:auto;}
+  .seating-card{padding:36px 18px 30px;}
+  .seating-crest{width:96px;height:96px;}
+  .seating-crest .crest-img{width:66px;}
+  .seating-board{margin-top:30px;}
+  .seat-row.opposite,.seat-row.main{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .seat{min-height:82px;padding:10px 7px;}
+  .seat-name,.seat.host .seat-name{font-size:.82rem;}
+  .banquet-table{min-height:104px;margin:14px 0;gap:12px;}
+  .table-seal{width:44px;height:44px;}
+  .table-copy strong{font-size:.95rem;}
+  .seating-side-label{font-size:.68rem;letter-spacing:.08em;}
   .footer-inner{display:block;text-align:center;}
   .footer-identity{justify-content:center;}
   .footer-contact{margin-top:20px;text-align:center;}

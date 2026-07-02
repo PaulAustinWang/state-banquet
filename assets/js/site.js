@@ -4,6 +4,7 @@
     {id:'information',href:'banquet-information.html',zh:'宴會資訊',en:'Information'},
     {id:'guests',href:'guest-list.html',zh:'賓客名單',en:'Guest List'},
     {id:'invitation',href:'state-banquet.html',zh:'邀請函',en:'Invitation'},
+    {id:'seating',href:'seating-plan.html',zh:'座位表',en:'Seating Plan'},
     {id:'guidelines',href:'banquet-guidelines.html',zh:'宴會規範',en:'Guidelines'}
   ];
 
